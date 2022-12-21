@@ -1,11 +1,6 @@
 function dryNumber(dry, numbers) {
-    let retorno = []
-    for (let i=1; i<=numbers; i++) {
-        if (i.toString().includes(dry.toString())) {
-            retorno.push(i)
-        }
-    }
-    return retorno
+    const list = [...Array(numbers+1).keys()]
+    return list.filter(e => e.toString().includes(dry))
 }
 
 module.exports = dryNumber
